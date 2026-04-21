@@ -1,0 +1,126 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, sans-serif;
+    background-color: rgb(55, 158, 255);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+h1{
+    color: white;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* MAIN CONTAINER */
+#container{
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 1200px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    gap: 20px;
+}
+
+/* LEFT SIDE */
+#searchContainer{
+    background-color: rgb(72, 159, 225);
+    border-radius: 10px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 15px;
+}
+
+#search, #history{
+    background-color: rgb(72, 159, 225);
+    border-radius: 10px;
+}
+
+#historyList{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 10px 0;
+}
+
+.listItem{
+    background-color: rgb(185, 235, 119);
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+/* RIGHT SIDE */
+#result{
+    background-color: rgb(72, 159, 225);
+    flex: 1;
+    border-radius: 10px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+h3{
+    margin-bottom: 15px;
+}
+
+p{
+    margin: 8px 0;
+}
+
+/* INPUT + BUTTON */
+#search{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#search input{
+    height: 45px;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+#search button{
+    height: 45px;
+    width: 100%;
+    background-color: rgb(241, 157, 32);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* RESULT ITEMS */
+.resultItem{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(255,255,255,0.4);
+    border-top: 1px solid rgba(255,255,255,0.4);
+    padding: 8px 0;
+}
+
+/* ------------------ MOBILE ------------------ */
+@media (max-width: 768px){
+
+    #container{
+        flex-direction: column;
+    }
+
+    .resultItem{
+        flex-direction: column;
+        gap: 4px;
+    }
+}
